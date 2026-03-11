@@ -63,14 +63,14 @@ p,
 label,
 input,
 textarea {
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.55;
 }
 
 h1,
 h2,
 h3 {
-  margin: 0;
+  margin: 0 0 var(--space-1);
   color: var(--ink);
   font-family: "Fraunces", Georgia, serif;
   font-weight: 600;
@@ -250,8 +250,7 @@ p {
 }
 
 .button,
-.chip,
-.app-badge {
+.chip {
   font-family: "Nunito Sans", "Arial Rounded MT Bold", sans-serif;
   font-weight: 800;
 }
@@ -285,8 +284,7 @@ p {
   background: rgba(255, 255, 255, 0.14);
 }
 
-.chip,
-.app-badge {
+.chip {
   display: inline-flex;
   align-items: center;
   min-height: 38px;
