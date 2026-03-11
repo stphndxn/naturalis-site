@@ -8,6 +8,7 @@
       name="description"
       content="Naturalis is an iOS field journal for identifying species, collecting sightings, and building a personal illustrated natural history over time."
     />
+    <link rel="icon" type="image/png" href="assets/favicon/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -53,22 +54,24 @@
             <h2>Naturalis turns everyday encounters into a personal natural history.</h2>
           </div>
           <div class="summary__grid">
-            <div class="summary__copy stack-md">
+            <div class="summary__intro stack-md">
               <p>
                 Naturalis is an iOS companion for people who walk, garden, bird,
                 forage, observe, and pay attention. It begins with a photograph in the
                 field and becomes a durable record of what you have actually seen.
               </p>
+            </div>
+            <div class="summary__detail stack-md">
               <p>
                 Each species you identify is added to your private library. New
                 species can become fuller entries over time, with bespoke
                 scientific-style illustration and editorial reference material that
                 makes the archive richer with every encounter.
               </p>
-            </div>
-            <div class="summary__card stack-sm">
-              <p class="utility">What it is</p>
-              <p>An identification tool, a field journal, and a growing illustrated archive.</p>
+              <div class="summary__card stack-sm">
+                <p class="utility">What it is</p>
+                <p>An identification tool, a field journal, and a growing illustrated archive.</p>
+              </div>
             </div>
           </div>
         </section>
@@ -207,22 +210,28 @@
                 remember where they saw a bird last winter.”
               </p>
             </div>
-            <div class="illustration-strip" aria-label="Selected Naturalis species illustrations">
-              <img
-                class="illustration-strip__item"
-                src="assets/images/species-fly-agaric-detail.png"
-                alt="Naturalis illustration of a Fly Agaric mushroom."
-              />
-              <img
-                class="illustration-strip__item illustration-strip__item--featured"
-                src="assets/images/species-house-sparrow-detail.png"
-                alt="Naturalis illustration of a House Sparrow."
-              />
-              <img
-                class="illustration-strip__item"
-                src="assets/images/species-turkey-tail-detail.png"
-                alt="Naturalis illustration of a Turkey Tail fungus."
-              />
+            <div class="illustration-composition" aria-label="Selected Naturalis species illustrations">
+              <figure class="illustration-card illustration-card--left">
+                <img
+                  class="illustration-card__image"
+                  src="assets/images/species-fly-agaric-detail.png"
+                  alt="Naturalis illustration of a Fly Agaric mushroom."
+                />
+              </figure>
+              <figure class="illustration-card illustration-card--center">
+                <img
+                  class="illustration-card__image"
+                  src="assets/images/species-house-sparrow-detail.png"
+                  alt="Naturalis illustration of a House Sparrow."
+                />
+              </figure>
+              <figure class="illustration-card illustration-card--right">
+                <img
+                  class="illustration-card__image"
+                  src="assets/images/species-turkey-tail-detail.png"
+                  alt="Naturalis illustration of a Turkey Tail fungus."
+                />
+              </figure>
             </div>
           </div>
         </section>
