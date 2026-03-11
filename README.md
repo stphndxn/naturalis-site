@@ -5,7 +5,7 @@ Static landing page prepared for Netlify deployment.
 ## Files
 
 - `index.html`: page structure and Netlify form markup
-- `styles.css`: visual system and responsive layout
+- `styles.css`: editorial visual system, responsive layout, and warm dark mode
 - `netlify.toml`: publish directory for Netlify
 
 ## Deploy on Netlify
