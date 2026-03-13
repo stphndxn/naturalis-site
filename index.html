@@ -34,8 +34,8 @@
             </p>
           </div>
           <div class="hero__actions cluster-md">
-            <a class="button button--primary" href="#waitlist">Join the waitlist</a>
-            <a class="button button--secondary" href="#summary">Read the overview</a>
+            <a class="button button--primary" href="#waitlist" id="hero-waitlist-cta">Join the waitlist</a>
+            <a class="button button--secondary" href="#summary" id="hero-overview-cta">Read the overview</a>
           </div>
         </div>
         <div class="hero__aside stack-md">
@@ -273,7 +273,7 @@
             </p>
           </div>
           <div class="cta-band__actions cluster-md">
-            <a class="button button--primary" href="#waitlist">Get early access</a>
+            <a class="button button--primary" href="#waitlist" id="footer-waitlist-cta">Get early access</a>
           </div>
         </section>
 
@@ -283,6 +283,7 @@
             <h2>Join the first release of Naturalis.</h2>
           </div>
           <form
+            id="naturalis-waitlist-form"
             class="waitlist-form stack-md"
             name="naturalis-waitlist"
             method="POST"
@@ -324,5 +325,36 @@
         </section>
       </main>
     </div>
+    <script>
+      window.addEventListener("load", function () {
+        if (!window.fathom || typeof window.fathom.trackEvent !== "function") {
+          return;
+        }
+
+        var trackClick = function (id, eventName) {
+          var element = document.getElementById(id);
+
+          if (!element) {
+            return;
+          }
+
+          element.addEventListener("click", function () {
+            window.fathom.trackEvent(eventName);
+          });
+        };
+
+        trackClick("hero-waitlist-cta", "hero waitlist click");
+        trackClick("hero-overview-cta", "hero overview click");
+        trackClick("footer-waitlist-cta", "footer waitlist click");
+
+        var waitlistForm = document.getElementById("naturalis-waitlist-form");
+
+        if (waitlistForm) {
+          waitlistForm.addEventListener("submit", function () {
+            window.fathom.trackEvent("waitlist form submit");
+          });
+        }
+      });
+    </script>
   </body>
 </html>
