@@ -130,6 +130,26 @@ p {
   max-width: 32rem;
 }
 
+.hero__proof-list {
+  display: grid;
+  gap: var(--space-1);
+  max-width: 34rem;
+}
+
+.hero__proof-list p,
+.hero__cta-note {
+  color: var(--ink-soft);
+}
+
+.hero__proof-list p::before {
+  content: "• ";
+  color: var(--accent);
+}
+
+.hero__cta-note {
+  font-style: italic;
+}
+
 .hero__aside {
   align-self: stretch;
 }
@@ -301,6 +321,10 @@ p {
 
 .summary__detail {
   padding-top: clamp(72px, 8vw, 128px);
+}
+
+.summary__detail .summary__card + .summary__card {
+  margin-top: var(--space-2);
 }
 
 .feature-grid {
