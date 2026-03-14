@@ -83,8 +83,8 @@ h3 {
 }
 
 h1 {
-  font-size: clamp(2.9rem, 6vw, 5rem);
-  max-width: 9ch;
+  font-size: clamp(2.5rem, 5vw, 4.25rem);
+  max-width: 10ch;
 }
 
 h2 {
@@ -127,13 +127,13 @@ p {
 }
 
 .hero__lede {
-  max-width: 32rem;
+  max-width: 29rem;
 }
 
 .hero__proof-list {
   display: grid;
   gap: var(--space-1);
-  max-width: 34rem;
+  max-width: 30rem;
 }
 
 .hero__proof-list p,
@@ -154,10 +154,12 @@ p {
   align-self: stretch;
 }
 
+.hero__content {
+  padding-top: 8px;
+}
+
 .cluster-md,
-.cluster-sm,
-.cta-band,
-.cta-band__actions {
+.cluster-sm {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -167,8 +169,7 @@ p {
   gap: var(--space-1);
 }
 
-.cluster-md,
-.cta-band__actions {
+.cluster-md {
   gap: var(--space-2);
 }
 
@@ -392,11 +393,6 @@ p {
 
 .pull-quote {
   border-left: 4px solid var(--accent);
-}
-
-.cta-band {
-  justify-content: space-between;
-  gap: var(--space-4);
 }
 
 .waitlist {
