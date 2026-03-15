@@ -89,7 +89,7 @@ h1 {
 
 h2 {
   font-size: clamp(2rem, 4vw, 3.4rem);
-  max-width: 12ch;
+  max-width: none;
 }
 
 h3 {
@@ -158,6 +158,10 @@ p {
   padding-top: 8px;
 }
 
+.hero__content > * + * {
+  margin-top: var(--space-2);
+}
+
 .cluster-md,
 .cluster-sm {
   display: flex;
@@ -219,7 +223,6 @@ p {
 }
 
 .screen-card,
-.summary__card,
 .feature-card,
 .showcase-card,
 .pull-quote,
@@ -228,6 +231,12 @@ p {
   border-radius: var(--radius-panel);
   border: 1px solid var(--border);
   background: var(--surface-strong);
+}
+
+.feature-card,
+.showcase-card,
+.pull-quote {
+  padding: var(--space-2);
 }
 
 .aside-note {
@@ -303,7 +312,6 @@ p {
   margin-top: var(--space-1);
 }
 
-.summary__grid,
 .showcase-grid,
 .waitlist,
 .section--split {
@@ -311,21 +319,16 @@ p {
   gap: var(--space-4);
 }
 
-.summary__grid {
-  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
-  align-items: start;
-}
-
-.summary__intro {
-  max-width: 28rem;
-}
-
-.summary__detail {
-  padding-top: clamp(72px, 8vw, 128px);
-}
-
-.summary__detail .summary__card + .summary__card {
+.section-heading > * + * {
   margin-top: var(--space-2);
+}
+
+.summary {
+  padding: var(--space-2);
+}
+
+.summary__copy {
+  max-width: none;
 }
 
 .feature-grid {
@@ -396,17 +399,30 @@ p {
 }
 
 .waitlist {
-  grid-template-columns: 0.95fr 1.05fr;
+  grid-template-columns: 1fr;
   align-items: start;
 }
 
-.form-row {
-  display: grid;
-  gap: var(--space-1);
+.waitlist-form {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
-.form-row input,
-.form-row textarea {
+.waitlist-form__label {
+  display: block;
+  margin-bottom: var(--space-1);
+}
+
+.waitlist-form__row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: var(--space-2);
+  align-items: center;
+}
+
+.waitlist-form input {
   width: 100%;
   padding: 14px 16px;
   border-radius: var(--radius-inner);
@@ -417,14 +433,12 @@ p {
 }
 
 @media (prefers-color-scheme: dark) {
-  .form-row input,
-  .form-row textarea {
+  .waitlist-form input {
     background: rgba(58, 45, 34, 0.78);
   }
 }
 
-.form-row input:focus,
-.form-row textarea:focus {
+.waitlist-form input:focus {
   outline: 2px solid rgba(145, 183, 21, 0.35);
   border-color: var(--accent);
 }
@@ -435,16 +449,11 @@ p {
 
 @media (max-width: 1040px) {
   .hero,
-  .summary__grid,
   .section--split,
   .waitlist,
   .feature-grid,
   .showcase-grid {
     grid-template-columns: 1fr;
-  }
-
-  .summary__detail {
-    padding-top: 0;
   }
 
   .illustration-composition {
@@ -471,16 +480,18 @@ p {
 
   .section,
   .screen-card,
-  .summary__card,
   .feature-card,
   .showcase-card,
-  .pull-quote,
-  .waitlist-form {
+  .pull-quote {
     padding: 24px;
   }
 
   .button {
     width: 100%;
+  }
+
+  .waitlist-form__row {
+    grid-template-columns: 1fr;
   }
 
   h1,

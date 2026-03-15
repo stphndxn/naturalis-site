@@ -64,40 +64,22 @@
       </header>
 
       <main>
-        <section class="section section--panel summary" id="summary">
-          <div class="section-heading stack-sm">
+        <section class="section section--panel summary stack-md" id="summary">
+          <div class="section-heading">
             <p class="eyebrow">Product Summary</p>
             <h2>Naturalis turns everyday encounters into a personal natural history.</h2>
           </div>
-          <div class="summary__grid">
-            <div class="summary__intro stack-md">
-              <p>
-                Naturalis is an iOS companion for people who walk, garden, bird,
-                forage, observe, and pay attention. It begins with a photograph in the
-                field and becomes a durable record of what you have actually seen.
-              </p>
-            </div>
-            <div class="summary__detail stack-md">
-              <p>
-                Each species you identify is added to your private library. New
-                species can become fuller entries over time, with bespoke
-                scientific-style illustration and editorial reference material that
-                makes the archive richer with every encounter.
-              </p>
-              <div class="summary__card stack-sm">
-                <p class="utility">What it is</p>
-                <p>An identification tool, a field journal, and a growing illustrated archive.</p>
-              </div>
-              <div class="summary__card stack-sm">
-                <p class="utility">Why join now</p>
-                <p>Early subscribers will hear first when beta access opens and can help shape the first release.</p>
-              </div>
-            </div>
+          <div class="summary__copy">
+            <p>
+              Naturalis is an iOS companion for people who walk, garden, bird,
+              forage, observe, and pay attention. It begins with a photograph in the
+              field and becomes a durable record of what you have actually seen.
+            </p>
           </div>
         </section>
 
-        <section class="section">
-          <div class="section-heading stack-sm">
+        <section class="section stack-md">
+          <div class="section-heading">
             <p class="eyebrow">Feature Overview</p>
             <h2>The core flow is built for clarity, trust, and quiet accumulation.</h2>
           </div>
@@ -153,8 +135,8 @@
           </div>
         </section>
 
-        <section class="section section--panel showcase">
-          <div class="section-heading stack-sm">
+        <section class="section section--panel showcase stack-md">
+          <div class="section-heading">
             <p class="eyebrow">Experience Preview</p>
             <h2>Three surfaces that define the product.</h2>
           </div>
@@ -274,15 +256,14 @@
           </div>
         </section>
 
-        <section class="section section--panel waitlist" id="waitlist">
-          <div class="section-heading stack-sm">
+        <section class="section section--panel waitlist stack-lg" id="waitlist">
+          <div class="section-heading">
             <p class="eyebrow">Waitlist</p>
             <h2>Join the first release of Naturalis.</h2>
-            <p>Start with your email. Early beta invites and product updates will go here first.</p>
           </div>
           <form
             id="naturalis-waitlist-form"
-            class="waitlist-form stack-md"
+            class="waitlist-form"
             name="naturalis-waitlist"
             method="POST"
             data-netlify="true"
@@ -295,8 +276,8 @@
                 <input name="bot-field" />
               </label>
             </p>
-            <div class="form-row">
-              <label for="email">Email</label>
+            <label class="waitlist-form__label" for="email">Email</label>
+            <div class="waitlist-form__row">
               <input
                 id="email"
                 name="email"
@@ -304,8 +285,8 @@
                 placeholder="you@example.com"
                 required
               />
+              <button class="button button--primary" type="submit">Request early access</button>
             </div>
-            <button class="button button--primary" type="submit">Request early access</button>
           </form>
         </section>
       </main>
