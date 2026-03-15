@@ -133,7 +133,7 @@ p {
 .hero__proof-list {
   display: grid;
   gap: var(--space-1);
-  max-width: 30rem;
+  margin: var(--space-4) 0;
 }
 
 .hero__proof-list p,
@@ -156,6 +156,7 @@ p {
 
 .hero__content {
   padding-top: 8px;
+  max-width: none;
 }
 
 .hero__content > * + * {
@@ -236,7 +237,7 @@ p {
 .feature-card,
 .showcase-card,
 .pull-quote {
-  padding: var(--space-2);
+  padding: var(--space-4);
 }
 
 .aside-note {
@@ -305,7 +306,7 @@ p {
 }
 
 .stack-md > * + * {
-  margin-top: var(--space-2);
+  margin-top: var(--space-4);
 }
 
 .stack-sm > * + * {
@@ -320,7 +321,7 @@ p {
 }
 
 .section-heading > * + * {
-  margin-top: var(--space-2);
+  margin-top: var(--space-1);
 }
 
 .summary {
@@ -401,6 +402,7 @@ p {
 .waitlist {
   grid-template-columns: 1fr;
   align-items: start;
+  gap: 0;
 }
 
 .waitlist-form {
